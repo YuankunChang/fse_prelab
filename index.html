@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>FSE Chat Room</title>
+
+
+
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <!--Custom CSS-->
+    <!--Viewport Scaling-->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+    <!--Javascript-->
+ <!--     <script type='text/javascript' src='/js/room.js'></script> -->
+  </head>
+
+
+  <body>
+    <div id='container_wrapper'>
+      <div id='container'>
+        <header>
+          <h1>FSE Chat Room</h1>
+        </header>
+        <ul id="messagesContainer"></ul>
+        <form id='messageForm' action='' method=''>
+          <input type='text' id='messageField' name='message' size='30' autocomplete='off' placeholder='Enter your message here...'/>
+          <button id='postMessageButton' type='submit'>send</button>
+        </form>
+        <script src="/socket.io/socket.io.js"></script>
+       
+        <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+        <script>
+
+          // var socket = io('http://localhost/{{username}}/message');
+          var socket = io();
+
+
+
+          $('form').submit(function(){
+            socket.emit('new message', {
+              username: 'xxx',  
+              msg: $('#messageField').val()
+            });
+            $('#messageField').val('');
+            return false;
+          });
+  
+
+          socket.on('chat message', function(msg){
+
+            console.log('received chat message' + msg);
+            $('#messagesContainer').append($('<li>').text(msg.msg));
+          });
+
+        </script>  
+               
+      </div>
+    
+    </div>
+
+  </body>
+</html>

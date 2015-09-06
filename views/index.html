@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <title>FSE Chat Room</title>
+
+
+
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <!--Custom CSS-->
+    <!--Viewport Scaling-->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+    <!--Javascript-->
+ <!--     <script type='text/javascript' src='/js/room.js'></script> -->
+  </head>
+
+
+  <body>
+    <div id='container_wrapper'>
+      <div id='container'>
+        <header>
+          <h1>FSE Chat Room</h1>
+        </header>
+          <!-- <button id='drop' type='close'>X</button> -->
+        <ul id="messagesContainer"></ul>
+        <form id='messageForm' action='/' method=''>
+          <input type='text' id='messageField' name='message' size='30' autocomplete='off' placeholder='Enter your message here...'/>
+          <input type='hidden' name='username' value='{{username}}'/>
+          <button id='postMessageButton' type='submit'>send</button>
+
+        </form>
+        <script src="/socket.io/socket.io.js"></script>
+       
+
+        <script src="http://code.jquery.com/jquery-1.11.1.js"></script> 
+
+        <script>
+
+          // var socket = io('http://localhost/{{username}}/message');
+          var socket = io();
+
+          socket.emit('new html');
+          var message;
+
+          $('form').submit(function(){
+            socket.emit('new message', {
+              // username: $('username').val(),
+              username: $("input[type='hidden']").val(),
+
+              // console.log('got username' + username);
+
+
+              message: $('#messageField').val()
+            });
+            $('#messageField').val('');
+            return false;
+          });
+
+            socket.on('chat message', function(msg){
+
+            console.log('received chat message' + msg);
+            // $('#messagesContainer').append($('<li>').text(msg.time));
+            var liClass = 'message';
+
+            var li = "<li class=" + liClass + " '><div class = 'username' > " + msg.username + "</div><div class = 'time' > " + msg.time + "</div><div class = 'msg'>" + msg.message + "</div></li>";
+
+            $('#messagesContainer').append(li);
+            // $('#messagesContainer').append($('<li>').text(msg.msg));            
+
+          });
+
+        </script>  
+               
+      </div>
+    
+    </div>
+
+  </body>
+</html>

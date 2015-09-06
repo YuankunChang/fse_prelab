@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <title>FSE chatroom login</title>
+
+    <link rel='stylesheet' type="text/css" href="/css/login.css">
+
+    <script type='text/javascript' src='/js/room.js'></script>    
+
+
+  </head>
+
+  <body>
+    <div id='container'>
+        <header>
+          <h1>FSE Chat Room</h1>
+        </header>
+        <ul id='username'></ul>>
+        <form id = 'usernameForm' action ="/" method="post">
+          <input type='text' id = 'usernameField' name='username' size='30' autocomplete = 'off' placeholder='Enter your usernaeme here'/><button id="loginButton" type="submit">login</buttons>
+        </form>
+
+    </div>
+
+    
+    <script src="/socket.io/socket.io.js"></script>
+   
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<!-- 
+    <script>
+
+      var socket = io();
+      $('form').submit(function(){
+        socket.emit('chat message', $('#m').val());
+        $('#m').val('');
+        return false;
+      });
+
+      socket.on('chat message', function(msg){
+        $('#messages').append($('<li>').text(msg));
+      });
+
+    </script>
+
+
+ -->
+  </body>
+</html>

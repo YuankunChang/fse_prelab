@@ -1,0 +1,110 @@
+body {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	background-color: white;
+	width:600px;
+	position: absolute;
+	left: 25%;
+}
+
+
+
+header {
+	width: 100%;
+	height: 80px;
+	position: absolute;
+	top: 0;
+	color: white;
+
+	/*Background*/
+	background: rgb(30,144,255); /* Old browsers */
+}
+
+h1 {
+	font-size: 1.5em;
+	font-weight: 400;
+	position: absolute;
+	line-height: 80px;
+	left: 1em;
+	color: white;
+	transition: 0.25s;
+}
+
+h1:hover {
+	cursor: pointer;
+	color: white;
+}
+
+
+.body {
+	vertical-align: top;
+	min-width: 390px;
+	max-width: 410px;
+	padding: 10px;
+	display: inline-block;
+	text-align: left;
+	text-align: top;
+}
+
+
+
+textarea:focus, input:focus {
+	outline: 0;
+}
+
+input, input:focus, button, button:focus {
+	display: inline-block;
+	height: 100%;
+	border: 0;
+	padding: 0;
+	border: none;
+	padding: none;
+	margin: 0;
+	box-shadow: none;
+	outline: 0;
+}
+
+#usernameField, #loginButton {
+	display: inline;
+	background-color: white;
+	height: 50px;
+	width: 80%;
+
+
+	/*padding: 5px 40px 5px 20px;*/
+	font-size: 1em;
+
+	border-top: 3px solid rgb(228, 232, 235);
+	border-left: 3px solid rgb(228, 232, 235);
+	border-bottom: 3px solid rgb(228, 232, 235);
+	font-family: inherit;
+
+	position: absolute;
+	top: 200px;
+	/*left: 0;*/
+	/*bottom: 50%;*/
+
+}
+
+#loginButton {
+	font-family: inherit;
+	font-size: 1.25em;
+	line-height: 50px;
+	color: #1870a4;
+	width: 20%;
+
+	position: absolute;
+	top: 200px;
+	right: 0;
+
+	height: 56px;
+
+	background-color: white;
+	border: 3px solid rgb(228, 232, 235);
+	transition: 0.25s;
+}
+
+#postMessageButton:hover {
+	cursor: pointer;
+	color: #152678;
+}

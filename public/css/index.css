@@ -1,0 +1,249 @@
+body {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	background-color: white;
+}
+
+ul{
+	width:540px;
+	position: absolute;
+	height: 350px;
+	bottom: 110px;
+	border: 5px white;
+}
+
+
+form { background: #000; paddind: 3px; position: fixed; bottom: 0; width: 100%; }
+/*#messages { list-style-type: none; margin: 0; padding: 0; }
+#messages li { padding: 5px 10px; }
+#messages li:nth-child(odd) { background: #eee; }*/
+
+.message {
+	width: 520px;
+	border-bottom: 1px solid rgb(228, 232, 235);
+	min-height: 40px;
+	text-align: left;
+	line-height: 2em;
+	background: rgb(245,245,245);
+	margin: 2px;
+	overflow: scroll;
+}
+
+.nickname {
+	padding: 10px;
+	display: inline-block;
+	text-align: left;
+	color: #152678;
+}
+
+.body {
+	vertical-align: top;
+	min-width: 390px;
+	max-width: 410px;
+	padding: 10px;
+	display: inline-block;
+	text-align: left;
+	text-align: top;
+	font-size: 2em;
+}
+
+.time {
+	float: right;
+	vertical-align: top;
+	font-size: 1em;
+	width: 70px;
+	padding-right: 10px;
+	display: inline-block;
+	text-align: left;
+	text-align: top;
+}
+
+
+/*.message {
+	font-size: 1.5em;
+	font-weight: 400;
+	position: absolute;
+	line-height: 30px;
+	text-align: center;
+	left: 1em;
+	color: black;
+	transition: 0.25s; 
+}*/
+
+
+#drop{
+	background: red;
+	font-family: inherit;
+	font-size: 1.25em;
+	line-height: 50px;
+	color: #1870a4;
+
+
+	position: absolute;
+	right: 3px;
+	top: 7px;
+
+
+	border-left: 3px solid rgb(228,232,235);
+	border-top: 3px solid rgb(228,232,235);
+	border-bottom: 3px solid rgb(228,232,235);
+	border-right: 3px solid rgb(228,232,235);
+
+
+	width: 30px;
+	height: 30px;
+
+	/*background-color: rgb(30,144,255);*/
+	/*border-top: 1px solid rgb(228, 232, 235);*/
+	transition: 0.25s;
+
+
+}
+
+#message{
+	text-align: left;
+}
+
+#container_wrapper {
+	width: 610px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 25%;
+	border:5px solid rgb(190,190,190);
+}
+
+#container {
+	width: 600px;
+	height: 100%;
+	text-align: center;
+	background-color: white;
+	border-left: 1px solid rgb(228, 232, 235);
+	border-right: 1px solid rgb(228, 232, 235);
+	position: relative;
+	left: 4px;
+
+	/*box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 6px 0 8px -2px rgba(228, 232, 235, 0.3), -6px 0 8px -2px rgba(228, 232, 235, 0.3);*/
+}
+
+header {
+	width: 600px;
+	height: 80px;
+	position: absolute;
+	top: 4px;
+	left:0;
+/*	color: white;*/
+	text-align: center;
+
+
+	background: rgb(30,144,255);
+
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: 400;
+	position: absolute;
+	line-height: 80px;
+	text-align: center;
+	left: 1em;
+	color: white;
+	transition: 0.25s;
+}
+
+h1:hover {
+	cursor: pointer;
+	color: green;
+}
+
+
+#messagesContainer {
+	width: 600px;
+	position: absolute;
+	top: 80px;
+	bottom: 50px;
+	overflow: scroll;
+	font-family: inherit;
+}
+
+/*.message {
+	width: 600px;
+	border-bottom: 1px solid rgb(228, 232, 235);
+	min-height: 40px;
+	text-align: left;
+	line-height: 1.2em;
+}*/
+
+
+#messageForm {
+	width: 600px;
+	height: 110px;
+	position: absolute;
+	bottom: 60px;
+	left: 0px;
+	text-align: left;
+	background: white;
+}
+
+textarea:focus, input:focus {
+	outline: 0;
+}
+
+input, input:focus, button, button:focus {
+	display: inline-block;
+	height: 100%;
+	border: 0;
+	padding: 0;
+	border: none;
+	padding: none;
+	margin: 0;
+	box-shadow: none;
+	outline: 0;
+}
+
+#messageField {
+	width: 540px;
+	background-color: rgb(173,216,230);
+	height: 100px;
+	padding: 5px 40px 5px 20px;
+	font-size: 1em;
+
+	border-top: 1px solid rgb(228, 232, 235);
+	border-right: 1px solid rgb(228, 232, 235);
+	font-family: inherit;
+
+	position: relative;
+	left: 0;
+	bottom: 10px;
+}
+
+#postMessageButton {
+	font-family: inherit;
+	font-size: 1.25em;
+	line-height: 50px;
+	color: #1870a4;
+
+
+	position: relative;
+	left: 30;
+	bottom: 0;
+
+
+	border-left: 200px solid rgb(228,232,235);
+	border-top: 3px solid rgb(228,232,235);
+	border-bottom: 3px solid rgb(228,232,235);
+	border-right: 200px solid rgb(228,232,235);
+
+
+	width: 600px;
+	height: 50px;
+
+	background-color: rgb(30,144,255);
+	/*border-top: 1px solid rgb(228, 232, 235);*/
+	transition: 0.25s;
+}
+
+#postMessageButton:hover {
+	cursor: pointer;
+	color: #152678;
+}
